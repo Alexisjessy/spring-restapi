@@ -120,6 +120,17 @@ public class Account {
         return this.balance;
     }
 
+    public Account(Long id, String firstName, String lastName, String email, LocalDate birthday,
+            LocalDateTime creationTime, BigDecimal balance) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.birthday = birthday;
+        this.creationTime = creationTime;
+        this.balance = balance;
+    }
+
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
