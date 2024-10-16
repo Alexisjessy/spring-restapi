@@ -80,7 +80,7 @@ class AccountRestControllerTest {
         accountDao.save(account1);
         accountDao.save(account2);
 
-        mockMvc.perform(get("/accountMap"))
+        mockMvc.perform(get("/accounts"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.[*].email").value(hasItems("jboy@gmail.com", "obay@gmail.com")));
     }
